@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Meeting Room Booking System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0066cc, #00aaff);
+            background-size: cover;
+            color: #fff;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #f0a500;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(240, 165, 0, 0.2);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #f0a500;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #eee;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>About Meeting Room Booking System</h1>
+            <p>
+                This system helps organizations manage meeting room bookings efficiently. 
+                Users can reserve rooms, check availability, and avoid scheduling conflicts. 
+                It ensures smooth coordination and saves time for employees and management.
+            </p>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features">
+            <div class="feature-card">
+                <h3>Real-Time Availability</h3>
+                <p>Check meeting room availability instantly and reserve without conflicts.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Easy Booking</h3>
+                <p>Simple interface to book rooms quickly with just a few clicks.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Notifications</h3>
+                <p>Receive reminders and updates about your upcoming meetings automatically.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Secure Access</h3>
+                <p>Only authorized users can view or book rooms, keeping schedules safe.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 Meeting Room Booking System. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

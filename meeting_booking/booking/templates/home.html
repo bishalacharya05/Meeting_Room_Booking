@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nepal Telecom Meeting Room Booking</title>
+  <style>
+    /* Reset default */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to right, #0066cc, #00aaff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    {% comment %} /* Navbar styles */
+    nav {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    } {% endcomment %}
+
+    /* Container styles */
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 60px 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      margin-top: 100px; /* space below navbar */
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #ffaa00;
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 12px 30px;
+      }
+
+      {% comment %} nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+      }
+
+      .nav-left, .nav-right {
+        gap: 15px;
+      } {% endcomment %}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  {% comment %} <nav>
+    <div class="nav-left">
+      <a href="#">Home</a>
+      <a href="{% url 'about' %}">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="{% url 'register' %}">Register</a>
+      <a href="{% url 'login' %}">Login</a>
+    </div>
+  </nav> {% endcomment %}
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1>Welcome to Nepal Telecom</h1>
+    <p>
+      This is the official Meeting Room Booking System for Nepal Telecom. 
+      Employees can easily check available rooms and book meetings 
+      without any conflicts. Save your time and manage meetings efficiently!
+    </p>
+    <a href="{% url 'booking' %}" class="btn">Book a Meeting Room</a>
+  </div>
+
+</body>
+</html>
